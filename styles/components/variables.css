@@ -1,0 +1,21 @@
+:root {
+	--text-color: white;
+	--background: #202731;
+
+	--blue: #3c31dd;
+	--red: #dd3f31;
+	--pink: #ff0066;
+	--dark: #0f0f10;
+
+	--white: #fff;
+	--dark-grey: #333;
+
+	--button-red: #ff1f71;
+	--button-blue: #2bd2ff;
+	--button-green: #1eff45;
+
+	--button-gradient-1: #cc0000;
+	--button-gradient-2: #d400a6;
+
+	--navlang-blue: #5da6ff;
+}
