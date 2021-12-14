@@ -10,6 +10,7 @@
 	--white: #fff;
 	--black: #000;
 	--dark-grey: #333;
+	--almost-black: #0004;
 
 	--button-red: #ff1f71;
 	--button-blue: #2bd2ff;
@@ -19,4 +20,6 @@
 	--button-gradient-2: #d400a6;
 
 	--navlang-blue: #5da6ff;
+
+	--button-outline: #0e1528;
 }

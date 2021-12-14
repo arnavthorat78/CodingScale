@@ -415,3 +415,76 @@ section {
 .navigation ul li.active a .text {
 	transform: scale(1);
 }
+
+/* Final Button Styles (thanks Online Tutorials!) */
+.final-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.final-btn a {
+	position: relative;
+	padding: 20px 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 40px;
+	transition: 1s;
+	text-decoration: none;
+	overflow: hidden;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, var(--almost-black));
+	width: 180px;
+}
+.final-btn a:hover {
+	background: var(--clr);
+	box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr), 0 0 100px var(--clr);
+}
+
+.final-btn a::before {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 400%;
+	background: var(--clr);
+	transition: 1s;
+	animation: animate 2s linear infinite;
+	animation-delay: calc(0.33s * var(--i));
+}
+.final-btn a:hover:before {
+	width: 100%;
+}
+.final-btn a::after {
+	content: "";
+	position: absolute;
+	inset: 4px;
+	background: var(--button-outline);
+	transition: 0.5s;
+}
+.final-btn a:hover::after {
+	background: var(--clr);
+}
+
+.final-btn a span {
+	position: relative;
+	z-index: 1;
+	font-size: 1em;
+	color: var(--white);
+	opacity: 0.5;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	transition: 0.5s;
+}
+.final-btn a:hover span {
+	opacity: 1;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

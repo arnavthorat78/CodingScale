@@ -29,6 +29,11 @@ header nav ul {
 }
 header nav ul li {
 	list-style: none;
+	border-right: 2px solid var(--dark);
+}
+header nav ul li:last-child {
+	list-style: none;
+	border-right: none;
 }
 header nav ul li a {
 	height: 50px;
@@ -77,6 +82,12 @@ header nav ul li a.active {
 	header nav ul {
 		display: block;
 		text-align: center;
+	}
+	header nav ul li {
+		border-bottom: 2px solid var(--dark-grey);
+	}
+	header nav ul li:last-child {
+		border-bottom: none;
 	}
 	header nav ul li a {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
