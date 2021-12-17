@@ -295,7 +295,98 @@ section {
 	background: linear-gradient(90deg, var(--button-gradient-1), var(--button-gradient-2));
 }
 
-/* Cards */
+/* Services (thanks Online Tutorials!) */
+.conatainer {
+	position: relative;
+	padding-top: 30px;
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.conatainer .serviceBox {
+	position: relative;
+	width: 350px;
+	height: 280px;
+	background: var(--services-background);
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.conatainer .serviceBox .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--i);
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	transition-delay: 0.25s;
+}
+.conatainer .serviceBox:hover .icon {
+	top: 30px;
+	left: calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	transition-delay: 0s;
+}
+.conatainer .serviceBox .icon .bi {
+	font-size: 5em;
+	color: var(--white);
+	transition: 0.5s;
+	transition-delay: 0.25s;
+}
+.conatainer .serviceBox:hover .icon .bi {
+	font-size: 2em;
+	transition-delay: 0s;
+}
+
+.conatainer .serviceBox .content {
+	position: relative;
+	padding: 20px;
+	color: var(--white);
+	text-align: center;
+	margin-top: 100px;
+	z-index: 1;
+	transform: scale(0);
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+.conatainer .serviceBox:hover .content {
+	transform: scale(1);
+	transition-delay: 0.25s;
+}
+.conatainer .serviceBox .content h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.conatainer .serviceBox .content p {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+@media (max-width: 1200px) {
+	.conatainer {
+		position: relative;
+		padding-top: 30px;
+		width: 1200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+}
+
+/* Cards (thanks Online Tutorials!) */
 .container-card {
 	position: relative;
 	display: flex;
@@ -362,58 +453,6 @@ section {
 	text-decoration: none;
 	font-weight: 500;
 	box-shadow: 0 50px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Features (thanks Online Tutorials!) */
-.navigation {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	width: 350px;
-	height: 70px;
-}
-.navigation ul {
-	display: flex;
-}
-.navigation ul li {
-	position: relative;
-	list-style: none;
-	width: 70px;
-	height: 70px;
-	z-index: 1;
-}
-.navigation ul li a {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	color: var(--white);
-	text-align: center;
-}
-.navigation ul li a .icon {
-	position: relative;
-	line-height: 75px;
-	transition: 0.5s;
-	font-size: 30px;
-}
-.navigation ul li.active a .icon {
-	font-size: 20px;
-	transform: translateY(-6px);
-}
-.navigation ul li a .text {
-	position: absolute;
-	font-size: 12px;
-	color: var(--white);
-	bottom: 20px;
-	font-weight: 400;
-	transition: 0.25s;
-	text-transform: uppercase;
-	transform: scale(0);
-}
-.navigation ul li.active a .text {
-	transform: scale(1);
 }
 
 /* Final Button Styles (thanks Online Tutorials!) */
