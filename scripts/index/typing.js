@@ -1,6 +1,15 @@
+/**
+ * The typed text to change.
+ */
 const typedTextSpan = document.querySelector(".typed-text");
+/**
+ * The cursor element.
+ */
 const cursorSpan = document.querySelector(".cursor");
 
+/**
+ * The array of text for the typing effect to cycle through.
+ */
 const textArray = [
 	"JavaScript",
 	"React",
@@ -11,13 +20,31 @@ const textArray = [
 	"other coding languages",
 	"more!",
 ];
+/**
+ * The number of milliseconds to delay each character typed.
+ */
 const typingDelay = 100;
+/**
+ * The number of milliseconds to delay each character removed.
+ */
 const erasingDelay = 100;
+/**
+ * The time to wait before a new word shows. Measures in milliseconds.
+ */
 const newTextDelay = 2000;
 
+/**
+ * The current index of the text array.
+ */
 let textArrayIndex = 0;
+/**
+ * The current character index.
+ */
 let charIndex = 0;
 
+/**
+ * Type the word on the DOM.
+ */
 const type = () => {
 	if (charIndex < textArray[textArrayIndex].length) {
 		if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
@@ -30,6 +57,9 @@ const type = () => {
 	}
 };
 
+/**
+ * Erase the word from the DOM.
+ */
 const erase = () => {
 	if (charIndex > 0) {
 		if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
