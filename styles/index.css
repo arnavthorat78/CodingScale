@@ -11,9 +11,9 @@ P {
 }
 
 .description {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: large;
-	color: var(--red);
+	color: var(--light-red);
 	overflow: hidden;
 	letter-spacing: 0.1rem;
 }
@@ -103,6 +103,7 @@ section {
 /* Typewriter Effect */
 .description span.typed-text {
 	font-weight: 700;
+	text-decoration: underline;
 }
 .description span.cursor {
 	display: inline-block;
@@ -281,6 +282,7 @@ section {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border-radius: 40px;
+	box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
 	background: linear-gradient(90deg, var(--button-gradient-1), var(--button-gradient-2));
 	transition: 0.5s;
 }
